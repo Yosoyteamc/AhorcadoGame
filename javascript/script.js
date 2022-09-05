@@ -13,6 +13,7 @@ function limpiarVariables(){
     countglobal = 0;
     recibir = true;
     incorrecto=1;
+    document.getElementById("btn-wf").value = "Rendirse";
 }
 
 function getRandomIntInclusive(min, max) {
@@ -267,7 +268,7 @@ function rendirse(){
         }
         alert("Te rendiste, la palabra era: " + palabra);
         recibir = false;
-        document.getElementById("btn-wf").style.content = "Salir";
+        document.getElementById("btn-wf").value = "Salir";
     }
     else{
         pantallaInicio();       

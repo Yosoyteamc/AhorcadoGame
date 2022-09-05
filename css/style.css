@@ -134,10 +134,20 @@ footer{
 }
 .area-contact {   
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     color: white;
 }
 
+.informacion a img{
+    width: 30px;
+    padding: 10px;
+}
+
+.area-contact p {
+    margin-top: 20px;
+}
 .area-contact p span{
     font-weight: 600;
 }
