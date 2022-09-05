@@ -284,8 +284,10 @@ function pantallaAgregarPalabra(){
 function pantallaInicio(){
     var pantallaInicio = document.getElementById("game-init");
     var pantallaAgregar = document.getElementById("game-add");
+    var pantallaJuego = document.getElementById("game-playing");
     pantallaInicio.style.display = "flex";
     pantallaAgregar.style.display = "none";
+    pantallaJuego.style.display = "none";
 }
 
 function pantallaJugar(){
