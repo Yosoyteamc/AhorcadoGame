@@ -1,0 +1,144 @@
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    background: rgb(64,80,176);
+    background: linear-gradient(48deg, rgba(64,80,176,1) 54%, rgba(80,100,222,1) 100%);
+}
+
+.scale{
+    width: 940px;
+    margin: auto;
+}
+
+nav{
+    padding: 10px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-nav-main{
+    width: 70px;
+}
+
+.nav-extras{
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #5576D9;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.nav-extras li a{
+    padding: 10px;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: white;
+}
+
+.in-game{
+    width: 80%;
+    height: 90vh;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    /*border: 1px solid black;*/
+}
+
+#game-add,#game-playing{
+    display: none;
+}
+
+.btn-game-init{
+    width: 300px;
+    padding: 20px;
+    margin: 10px 20px;
+    border-style: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #F26430;
+    color: white;
+}
+
+.btn-game-init-add{
+    background-color: #5576D9;
+}
+
+.areatext-new-word{
+    font-family: 'Inter', sans-serif;
+    width: 80%;
+    height: 50vh;
+    background-color: #4050b0 ;
+    border-radius: 10px;
+    border: 1px solid #5576D9;
+    resize: none;
+    padding: 2em;
+
+    color: white;
+    font-size: 18px;
+}
+
+.areatext-new-word::placeholder{
+    font-family: 'Inter', sans-serif;
+    color: white;
+    font-size: 18px;
+}
+
+.in-game p{
+    width: 80%;
+    padding: 2em;
+    color: white;
+}
+
+.in-game p img{
+    height: 100%;
+    margin-right: 10px;
+}
+
+.view-picture{
+    width: 80%;
+    background: white;
+    border-radius: 30px;
+    border: 1px solid #5576D9;
+}
+
+.view-word{
+    padding-top: 30px;
+    width: 80%;
+    height: 20%;
+}
+
+.in-game-playing{
+    width: 80%;
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+}
+
+footer{
+    width: 80%;
+    padding: 2em;
+}
+.area-contact {   
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.area-contact p span{
+    font-weight: 600;
+}
+

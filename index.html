@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego: Ahorcado!</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="javascript/script.js"></script>
+    <link rel="icon" href="images/favicon.1647533644.ico">
+</head>
+<body>
+    <header class="scale">
+        <nav>
+            <img src="images/logoalura.svg" alt="Logotipo de Alura" class="logo-nav-main">
+            <div>
+                <ul class="nav-extras">
+                    <li><a href="#">ver código</a></li>
+                    <li><a href="#area-contact">contacto</a></li>
+                    <li><a href="https://www.aluracursos.com" target="_blank">conocer  Alura</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main   class="scale">
+        <section class="in-game" id="game-init">
+            <input type="button" value="Iniciar Juego" class="btn-game-init" onclick="pantallaJugar()">
+            <input type="button" value="Agregar palabra" class="btn-game-init btn-game-init-add" onclick="pantallaAgregarPalabra()">
+        </section>
+        <section class="in-game" id="game-add">
+            <textarea class="areatext-new-word" id="text-new-word" cols="30" rows="10" placeholder="Ingrese la palabra a agregar"></textarea>
+            <p><img src="images/informacion.svg" alt="Icono de mensaje importante">Máximo de 8 letras.</p>
+            <div class="in-game-playing">
+                <input type="button" value="Agregar" class="btn-game-init" onclick="agregarPalabra()">
+                <input type="button" value="Regresar" class="btn-game-init btn-game-init-add" onclick="pantallaInicio()"> 
+            </div>
+        </section>
+        <section class="in-game" id="game-playing">
+            <canvas class="view-picture" id="canva-picture"></canvas>
+            <canvas class="view-word" id="canva-word"></canvas>
+            <div class="in-game-playing">
+                <input type="button" value="Nuevo juego" class="btn-game-init" onclick="pantallaJugar()">
+                <input type="button" value="Rendirse" id="btn-wf" class="btn-game-init btn-game-init-add" onclick="rendirse()">
+            </div>
+        </section>
+    </main>
+    <footer class="scale">
+        <section class="area-contact">
+            <p>Desarrollado por <span>Juan Mosquera</span> &copy; 2022 Todos los derechos reservados.</p>
+        </section>
+    </footer>
+    
+</body>
+</html>
