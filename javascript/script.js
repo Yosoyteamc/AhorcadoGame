@@ -229,7 +229,7 @@ function recibirLetras(letra){
 }
 
 function enviarLetraMovil(){
-    var letramobile = document.querySelector(".view-ingame__text-mobile").value;
+    var letramobile = String(document.querySelector(".view-ingame__text-mobile").value);
     const pattern = new RegExp('^[A-Z]+$', 'i');
     if(pattern.test(letramobile)){
         if(recibir){
@@ -237,12 +237,11 @@ function enviarLetraMovil(){
         }
     }
     else{
-            alert("Por favor ingrese solo letras")
+            alert("Por favor ingrese letras")
         }
     document.querySelector(".view-ingame__text-mobile").value = "";
 
 }
-
 
 function esperarLetras(){
 /*
