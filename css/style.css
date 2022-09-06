@@ -214,6 +214,10 @@ main{
     color: white;
 }
 
+footer{
+    margin-top: 50px;
+}
+
 .footer__info{
     margin: auto;
 }

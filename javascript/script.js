@@ -159,7 +159,7 @@ function dibujarLetras(letra, posicion, enlinea, color){
 function recibirLetras(letra){      
     let countincorrecta = false;
     let countcorrecta = false;
-    alert(letrapresionadacorrecta);
+
     if(letrapresionadacorrecta.length!=0){
         for(var i = 0;i < letrapresionadacorrecta.length; i++){
             if(letra==letrapresionadacorrecta[i]){
@@ -243,7 +243,9 @@ function enviarLetraMovil(){
 
 }
 
+
 function esperarLetras(){
+/*
     document.addEventListener('keyup', (event) => {
         var keyName = event.key;
         var KeyCode = event.keyCode; 
@@ -259,6 +261,7 @@ function esperarLetras(){
             }
         }
       }, false);
+*/
 }
 
 function jugar(){
