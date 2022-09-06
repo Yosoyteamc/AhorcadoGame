@@ -159,7 +159,7 @@ function dibujarLetras(letra, posicion, enlinea, color){
 function recibirLetras(letra){      
     let countincorrecta = false;
     let countcorrecta = false;
-
+    alert(letrapresionadacorrecta);
     if(letrapresionadacorrecta.length!=0){
         for(var i = 0;i < letrapresionadacorrecta.length; i++){
             if(letra==letrapresionadacorrecta[i]){
@@ -230,7 +230,6 @@ function recibirLetras(letra){
 
 function enviarLetraMovil(){
     var letramobile = document.querySelector(".view-ingame__text-mobile").value;
-    console.log(letramobile);
     const pattern = new RegExp('^[A-Z]+$', 'i');
     if(pattern.test(letramobile)){
         if(recibir){
@@ -240,8 +239,7 @@ function enviarLetraMovil(){
     else{
             alert("Por favor ingrese solo letras")
         }
-
-        document.querySelector(".view-ingame__text-mobile").value = "";
+    document.querySelector(".view-ingame__text-mobile").value = "";
 
 }
 
