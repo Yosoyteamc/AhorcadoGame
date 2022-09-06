@@ -3,57 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juego: Ahorcado!</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="javascript/script.js"></script>
-    <link rel="icon" href="images/favicon.1647533644.ico">
+    <title>Ahorcado Game</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./javascript/script.js"></script>
 </head>
 <body>
-    <header class="scale">
+    <header class="main-scale">
         <nav>
-            <img src="images/logoalura.svg" alt="Logotipo de Alura" class="logo-nav-main">
-            <div>
-                <ul class="nav-extras">
-                    <li><a href="https://github.com/Yosoyteamc/AhorcadoGame" target="_blank">ver código</a></li>
-                    <li><a href="#informacio">contacto</a></li>
-                    <li><a href="https://www.aluracursos.com" target="_blank">conocer  Alura</a></li>
-                </ul>
+            <img class="nav__image" src="./images/logoalura.svg" alt="Logotipo de Alura">    
+            <div class="nav__content">
+                <div class="nav__list">
+                    <ul>
+                        <li><a href="">Acerca de</a></li>
+                        <li><a href="">Ver código</a></li>
+                        <li><a href="">Conocer Alura</a></li>
+                    </ul>
+                </div>
+                <div class="nav__social-media">
+                    <a href=""><img class="social-media__image" src="./images/instagram.svg" alt="Logotipo de Instagram"></a>
+                    <a href=""><img class="social-media__image" src="./images/github.svg" alt="Logotipo de Github"></a>
+                    <a href=""><img class="social-media__image" src="./images/logotipo-de-linkedin.svg" alt="Logotipo de Linkedin"></a>
+                </div>
             </div>
         </nav>
     </header>
-    <main   class="scale">
-        <section class="in-game" id="game-init">
-            <input type="button" value="Iniciar Juego" class="btn-game-init" onclick="pantallaJugar()">
-            <input type="button" value="Agregar palabra" class="btn-game-init btn-game-init-add" onclick="pantallaAgregarPalabra()">
-        </section>
-        <section class="in-game" id="game-add">
-            <textarea class="areatext-new-word" id="text-new-word" cols="30" rows="10" placeholder="Ingrese la palabra a agregar"></textarea>
-            <p><img src="images/informacion.svg" alt="Icono de mensaje importante">Máximo de 8 letras.</p>
-            <div class="in-game-playing">
-                <input type="button" value="Agregar" class="btn-game-init" onclick="agregarPalabra()">
-                <input type="button" value="Regresar" class="btn-game-init btn-game-init-add" onclick="pantallaInicio()"> 
+    <main class="main-scale">
+        <section class="view-main">
+            <div class="view-main__btn-login">
+                <input class="btn-main__style" type="button" value="Iniciar juego" onclick="pantallaJugar()">
+                <input class="btn-main__style btn-main__style--secondary" type="button" value="Agregar palabra" onclick="pantallaAgregarPalabra()">
+            </div>
+            <div class="view-main__word">
+                <textarea class="word__text-area" id="" cols="30" rows="5" placeholder="Ingrese la palabra aquí" minlength="2" maxlength="8"></textarea>
+                <div class="view-main__btn-add-word">
+                    <input class="btn-main__style" type="button" value="Ingresar palabra" onclick="agregarPalabra()">
+                    <input class="btn-main__style btn-main__style--secondary" type="button" value="Regresar" onclick="pantallaInicio()">
+                </div>
             </div>
         </section>
-        <section class="in-game" id="game-playing">
-            <canvas class="view-picture" id="canva-picture"></canvas>
-            <canvas class="view-word" id="canva-word"></canvas>
-            <div class="in-game-playing">
-                <input type="button" value="Nuevo juego" class="btn-game-init" onclick="pantallaJugar()">
-                <input type="button" value="Rendirse" id="btn-wf" class="btn-game-init btn-game-init-add" onclick="rendirse()">
+        <section class="view-ingame">
+            <canvas class="view-ingame__view-picture" id="canva-picture"></canvas>
+            <div class="view-ingame__control-game">
+                <canvas class="view-ingame__view-word" id="canva-word"></canvas>
+                <input class="view-ingame__text-mobile" type="text" placeholder="Ingresa la letra aquí" minlength="1" maxlength="1">
+                <div class="view-ingame__btn-control-game">
+                    <input class="btn-main__style" type="button" value="Nuevo juego" onclick="pantallaJugar()">
+                    <input id="btn-wf" class="btn-main__style btn-main__style--secondary" type="button" value="Rendirse" onclick="rendirse()">
+                </div>
             </div>
         </section>
     </main>
-    <footer class="scale">
-        <section class="area-contact">
-            <div class="informacion" id="informacion">
-                <a href="https://www.instagram.com/yosoyteamc/" target="_blank"><img src="images/instagram.svg" alt="Icono de instagram"></a>
-                <a href="https://github.com/Yosoyteamc" target="_blank"><img src="images/github.svg" alt="Icono de github"></a>
-                <a href="https://www.linkedin.com/in/juan-daniel-mosquera-mina-91558a193/" target="_blank"><img src="images/logotipo-de-linkedin.svg" alt="Icono de Linkedin"></a>
+    <footer >
+        <div class="footer__info main-scale">
+            <h1 class="info-text__title">Acerca del Proyecto</h1>
+            <p class="info-text__parraf">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat soluta iusto quam!</p>
+            <div class="info-icon__social-media">
+                <a href=""><img class="social-media__image info-contact" src="./images/instagram.svg" alt="Logotipo de Instagram"></a>
+                <a href=""><img class="social-media__image info-contact" src="./images/github.svg" alt="Logotipo de Github"></a>
+                <a href=""><img class="social-media__image info-contact" src="./images/logotipo-de-linkedin.svg" alt="Logotipo de Linkedin"></a>
             </div>
-            <p>Desarrollado por <span>Juan Mosquera</span> &copy; 2022 Todos los derechos reservados.</p>
-        </section>
+        </div>
     </footer>
-    
 </body>
 </html>

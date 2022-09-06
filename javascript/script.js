@@ -136,7 +136,7 @@ function dibujarLetras(letra, posicion, enlinea, color){
     var pincel = canvas.getContext("2d");
 
     if(enlinea){
-        pincel.font="bold 70px Inter, serif";
+        pincel.font="bold 70px Rubik, serif";
         pincel.fillStyle = color;
         if(letra != "i"){
             pincel.fillText(letra.toUpperCase(),(37.5*posicion)+3,80,25);
@@ -148,7 +148,7 @@ function dibujarLetras(letra, posicion, enlinea, color){
         }
     }
     else{
-        pincel.font="bold 25px Inter, serif";
+        pincel.font="bold 25px Rubik, serif";
         pincel.fillStyle = "white";      
         pincel.fillText(letra.toUpperCase(),(15*countglobal),148,10);
         countglobal++;
@@ -275,25 +275,31 @@ function rendirse(){
     }
 }
 
+function agregarPalabra(){
+    console.log("Agregar");
+}
+
 function pantallaAgregarPalabra(){
-    var pantallaInicio = document.getElementById("game-init");
-    var pantallaAgregar = document.getElementById("game-add");
-    pantallaInicio.style.display = "none";
-    pantallaAgregar.style.display = "flex"
+    var btnlogin = document.querySelector(".view-main__btn-login");
+    var btnadd = document.querySelector(".view-main__word");
+    btnlogin.style.display = "none";
+    btnadd.style.display = "flex"
 }
 
 function pantallaInicio(){
-    var pantallaInicio = document.getElementById("game-init");
-    var pantallaAgregar = document.getElementById("game-add");
-    var pantallaJuego = document.getElementById("game-playing");
+    var btnlogin = document.querySelector(".view-main__btn-login");
+    var btnadd = document.querySelector(".view-main__word");
+    var pantallaJuego = document.querySelector(".view-ingame");
+    var pantallaInicio = document.querySelector(".view-main");
     pantallaInicio.style.display = "flex";
-    pantallaAgregar.style.display = "none";
-    pantallaJuego.style.display = "none";
+    pantallaJuego.style.display = "none"
+    btnlogin.style.display = "flex";
+    btnadd.style.display = "none"
 }
 
 function pantallaJugar(){
-    var pantallaInicio = document.getElementById("game-init");
-    var pantallaJuego = document.getElementById("game-playing");
+    var pantallaInicio = document.querySelector (".view-main");
+    var pantallaJuego = document.querySelector(".view-ingame");
     pantallaInicio.style.display = "none";
     pantallaJuego.style.display = "flex"
 
