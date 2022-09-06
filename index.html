@@ -46,7 +46,10 @@
             <canvas class="view-ingame__view-picture" id="canva-picture"></canvas>
             <div class="view-ingame__control-game">
                 <canvas class="view-ingame__view-word" id="canva-word"></canvas>
-                <input class="view-ingame__text-mobile" type="text" placeholder="Ingresa la letra aquí" minlength="1" maxlength="1">
+                <div class="view-ingame__mobile">
+                    <input class="view-ingame__text-mobile" type="text" placeholder="Ingresa la letra aquí" minlength="1" maxlength="1">
+                    <button class="btn-mobile" onclick="enviarLetraMovil()"><img class="btn-mobile__image" src="./images/flecha-correcta.svg" alt="flecha de enviar"></button>
+                </div>
                 <div class="view-ingame__btn-control-game">
                     <input class="btn-main__style" type="button" value="Nuevo juego" onclick="pantallaJugar()">
                     <input id="btn-wf" class="btn-main__style btn-main__style--secondary" type="button" value="Rendirse" onclick="rendirse()">

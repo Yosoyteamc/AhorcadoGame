@@ -228,6 +228,23 @@ function recibirLetras(letra){
 */
 }
 
+function enviarLetraMovil(){
+    var letramobile = document.querySelector(".view-ingame__text-mobile").value;
+    console.log(letramobile);
+    const pattern = new RegExp('^[A-Z]+$', 'i');
+    if(pattern.test(letramobile)){
+        if(recibir){
+            recibirLetras(letramobile);
+        }
+    }
+    else{
+            alert("Por favor ingrese solo letras")
+        }
+
+        document.querySelector(".view-ingame__text-mobile").value = "";
+
+}
+
 function esperarLetras(){
     document.addEventListener('keyup', (event) => {
         var keyName = event.key;

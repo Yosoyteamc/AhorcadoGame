@@ -125,7 +125,6 @@ main{
 
 .view-main__word{
     height: 300px;
-    
     display: none;
 }
 
@@ -170,16 +169,42 @@ main{
 
 .view-ingame__view-word{
     width: 90%;
-    height: 40%;
+    height: 35%;
+    margin-bottom: 20px;
+}
+
+.view-ingame__mobile{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
     margin-bottom: 20px;
 }
 
 .view-ingame__text-mobile{
-    width: 90%;
-    margin: auto;
+    width: 60%;
+    height: max-content;
+    color: white;
+}
+
+.btn-mobile{
+    width: 20%;
+    height: 100%;
+    border-radius: 20%;
+    border-style: none;
+    background-color: var(--yellow-color);
+}
+
+.btn-mobile:hover{
+    background-color: var(--yellow-color-dark);
+}
+
+.btn-mobile__image{
+    width: 20px;
+}
+
+.view-ingame__text-mobile{
     background-color: var(--bg-main);
     box-shadow: var(--shadow-main);
-    margin-bottom: 20px;
     border-radius: 5px;
     border-style: none;
     padding: 5%;
@@ -190,9 +215,6 @@ main{
 }
 
 .footer__info{
-    width: var(--scale-width-mobile-reduced);
-    border-radius: 10px;
-    box-shadow: var(--shadow-main);
     margin: auto;
 }
 
