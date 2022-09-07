@@ -5,6 +5,7 @@ let palabra = "";
 let countglobal = 0;
 let recibir = true;
 let incorrecto = 1;
+var color = "white";
 
 function limpiarVariables(){
     palabra = "";
@@ -32,15 +33,28 @@ function dibujarOrca(){
 
     pincel.moveTo(75,130);
     pincel.lineTo(225,130);
-    pincel.lineWidth = 3;
-    pincel.strokeStyle = "red";
+    pincel.lineWidth = 5;
+    pincel.strokeStyle = color;
     pincel.stroke();
 
     pincel.moveTo(112.5,130);
     pincel.lineTo(112.5,20);
-    pincel.lineWidth = 3;
-    pincel.strokeStyle = "red";
+    pincel.lineWidth = 5;
+    pincel.strokeStyle = color;
     pincel.stroke();
+
+    pincel.moveTo(132.5,20);
+    pincel.lineTo(112.5,40);
+    pincel.lineWidth = 5;
+    pincel.strokeStyle = color;
+    pincel.stroke();
+
+    pincel.moveTo(111,20);
+    pincel.lineTo(187.5,20);
+    pincel.lineWidth = 5;
+    pincel.strokeStyle = color;
+    pincel.stroke();
+
     return;
 }
 
@@ -71,18 +85,11 @@ function dibujarMunheco(paso){
     var pincel = canvas.getContext("2d");
 
     switch (paso) {
-        case 1:    
-            pincel.moveTo(111,20);
-            pincel.lineTo(187.5,20);
-            pincel.lineWidth = 3;
-            pincel.strokeStyle = "red";
-            pincel.stroke();
-            break;
         case 2:
             pincel.moveTo(187,20);
             pincel.lineTo(187,30);
-            pincel.lineWidth = 3;
-            pincel.strokeStyle = "red";
+            pincel.lineWidth = 5;
+            pincel.strokeStyle = color;
             pincel.stroke();
             break;
         case 3:
@@ -94,36 +101,36 @@ function dibujarMunheco(paso){
         case 4:
             pincel.moveTo(187,50);
             pincel.lineTo(187,90);
-            pincel.lineWidth = 3;
-            pincel.strokeStyle = "red";
+            pincel.lineWidth = 5;
+            pincel.strokeStyle = color;
             pincel.stroke();
             break;
         case 5:
             pincel.moveTo(187,50);
             pincel.lineTo(170,75);
-            pincel.lineWidth = 3;
-            pincel.strokeStyle = "red";
+            pincel.lineWidth = 5;
+            pincel.strokeStyle = color;
             pincel.stroke();
             break;
         case 6:
             pincel.moveTo(187,50);
             pincel.lineTo(204,75);
-            pincel.lineWidth = 3;
-            pincel.strokeStyle = "red";
+            pincel.lineWidth = 5;
+            pincel.strokeStyle = color;
             pincel.stroke();
             break;
         case 7: 
             pincel.moveTo(187,90);
             pincel.lineTo(204,115);
-            pincel.lineWidth = 3;
-            pincel.strokeStyle = "red";
+            pincel.lineWidth = 5;
+            pincel.strokeStyle = color;
             pincel.stroke(); 
             break;
         case 8:
             pincel.moveTo(187,90);
             pincel.lineTo(170,115);
-            pincel.lineWidth = 3;
-            pincel.strokeStyle = "red";
+            pincel.lineWidth = 5;
+            pincel.strokeStyle = color;
             pincel.stroke();
         default:
           console.log('No hay mas movimientos.');
@@ -176,7 +183,7 @@ function recibirLetras(letra){
                 dibujarLetras(letra,i,true,"white");
                 if(letraspresionadacorrecta.length == palabra.length){
                     for(var i = 0; i<palabra.length; i++){
-                        dibujarLetras(palabra[i],i,true,"Green");
+                        dibujarLetras(palabra[i],i,true,"white");
                     }
                     alert("Ganaste, la palabra era: " + palabra);
                     recibir = false;
@@ -198,7 +205,7 @@ function recibirLetras(letra){
                 letraspresionadaincorrecta.push(letra);
                 dibujarMunheco(incorrecto);
                 incorrecto++;
-                if(letraspresionadaincorrecta.length>7){
+                if(letraspresionadaincorrecta.length>6){
                     for(var i = 0; i<palabra.length; i++){
                         dibujarLetras(palabra[i],i,true,"red");  
                     }

@@ -36,7 +36,10 @@
                 <input class="btn-main__style btn-main__style--secondary" type="button" value="Agregar palabra" onclick="pantallaAgregarPalabra()">
             </div>
             <div class="view-main__word">
-                <textarea class="word__text-area" id="" cols="30" rows="5" placeholder="Ingrese la palabra aquí" minlength="2" maxlength="8"></textarea>
+                <div class="view-main__space-word">
+                    <textarea class="word__text-area" id="" cols="30" rows="5" placeholder="Ingrese la palabra aquí" minlength="2" maxlength="8"></textarea>
+                    <p class="word__parraf"><img src="images/informacion.svg" alt="Icono de mensaje importante">palabras con mínimo 8 letras, máximo 2 letras.</p>
+                </div>
                 <div class="view-main__btn-add-word">
                     <input class="btn-main__style" type="button" value="Ingresar palabra" onclick="agregarPalabra()">
                     <input class="btn-main__style btn-main__style--secondary" type="button" value="Regresar" onclick="pantallaInicio()">
@@ -52,8 +55,8 @@
                     <button class="btn-mobile" onclick="enviarLetraMovil()"><img class="btn-mobile__image" src="./images/flecha-correcta.svg" alt="flecha de enviar"></button>
                 </div>
                 <div class="view-ingame__btn-control-game">
-                    <input class="btn-main__style" type="button" value="Nuevo juego" onclick="pantallaJugar()">
-                    <input id="btn-wf" class="btn-main__style btn-main__style--secondary" type="button" value="Rendirse" onclick="rendirse()">
+                    <input class="btn-main__style btn-ingame--noborder" type="button" value="Nuevo juego" onclick="pantallaJugar()">
+                    <input id="btn-wf" class="btn-main__style btn-main__style--secondary btn-ingame--noborder" type="button" value="Rendirse" onclick="rendirse()">
                 </div>
             </div>
         </section>
@@ -62,7 +65,7 @@
         <section class="footer__info main-scale">
             <div>
                 <h1 class="info-text__title">Acerca del Proyecto</h1>
-                <p class="info-text__parraf">Esta pagina web contiene una ejemplificación del famoso "juego del ahorcado", el juego te permite adivinar y agregar palabras de hasta 8 letras y cuentas con 8 oportunidades para ganar.</p>
+                <p class="info-text__parraf">Esta pagina web contiene una ejemplificación del famoso "juego del ahorcado", el juego te permite adivinar y agregar palabras de hasta 8 letras y cuentas con 7 oportunidades para ganar.</p>
             </div>
             <div class="info-icon__social-media">
                 <a href="https://www.instagram.com/yosoyteamc/" target="_blank"><img class="social-media__image info-contact" src="./images/instagram.svg" alt="Logotipo de Instagram"></a>
