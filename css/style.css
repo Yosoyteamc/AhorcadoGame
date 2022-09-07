@@ -123,6 +123,7 @@ main{
     font-size: 14px;
     font-weight: 700;
     box-shadow: inset -1.5px -5px var(--orange-color-dark);
+    cursor: pointer;
 }
 
 .btn-main__style:hover, .btn-main__style--secondary:hover{
