@@ -1,6 +1,6 @@
 let palabras = ["html","java","script","fronted","backend","browser","windowsx","pc","gamer","board","css","xlm"];
-let letrapresionadaincorrecta = [];
-let letrapresionadacorrecta = [];
+let letraspresionadaincorrecta = [];
+let letraspresionadacorrecta = [];
 let palabra = "";
 let countglobal = 0;
 let recibir = true;
@@ -8,8 +8,8 @@ let incorrecto = 1;
 
 function limpiarVariables(){
     palabra = "";
-    letrapresionadaincorrecta = [];
-    letrapresionadacorrecta = [];
+    letraspresionadaincorrecta = [];
+    letraspresionadacorrecta = [];
     countglobal = 0;
     recibir = true;
     incorrecto=1;
@@ -160,9 +160,9 @@ function recibirLetras(letra){
     let countincorrecta = false;
     let countcorrecta = false;
 
-    if(letrapresionadacorrecta.length!=0){
-        for(var i = 0;i < letrapresionadacorrecta.length; i++){
-            if(letra==letrapresionadacorrecta[i]){
+    if(letraspresionadacorrecta.length!=0){
+        for(var i = 0;i < letraspresionadacorrecta.length; i++){
+            if(letra==letraspresionadacorrecta[i]){
                 countcorrecta = true;
             }
         }
@@ -172,9 +172,9 @@ function recibirLetras(letra){
         for(var i = 0; i<palabra.length; i++){
             if(letra == palabra[i]){
                 countincorrecta = true;
-                letrapresionadacorrecta.push(letra);
+                letraspresionadacorrecta.push(letra);
                 dibujarLetras(letra,i,true,"white");
-                if(letrapresionadacorrecta.length == palabra.length){
+                if(letraspresionadacorrecta.length == palabra.length){
                     for(var i = 0; i<palabra.length; i++){
                         dibujarLetras(palabra[i],i,true,"Green");
                     }
@@ -187,18 +187,18 @@ function recibirLetras(letra){
     }
     if(countincorrecta  === false){
         let countaux = false;
-        if(letrapresionadaincorrecta.length!=0){
-            for(var i = 0; i<letrapresionadaincorrecta.length; i++){
-                if(letra==letrapresionadaincorrecta[i]){
+        if(letraspresionadaincorrecta.length!=0){
+            for(var i = 0; i<letraspresionadaincorrecta.length; i++){
+                if(letra==letraspresionadaincorrecta[i]){
                     countaux = true;
                 }
             }
             if(countaux === false){
                 dibujarLetras(letra,i,false,"white");
-                letrapresionadaincorrecta.push(letra);
+                letraspresionadaincorrecta.push(letra);
                 dibujarMunheco(incorrecto);
                 incorrecto++;
-                if(letrapresionadaincorrecta.length>7){
+                if(letraspresionadaincorrecta.length>7){
                     for(var i = 0; i<palabra.length; i++){
                         dibujarLetras(palabra[i],i,true,"red");  
                     }
@@ -209,7 +209,7 @@ function recibirLetras(letra){
             }
         }
         else{
-            letrapresionadaincorrecta.push(letra);
+            letraspresionadaincorrecta.push(letra);
             dibujarLetras(letra,i,false,"white");
             dibujarMunheco(incorrecto);
             incorrecto++;
@@ -219,13 +219,12 @@ function recibirLetras(letra){
     countincorrecta = false;
     countcorrecta = false;
 
-    //Imprirmir lo que hay en las listas de letras: correctas e incorrectas.
-/*     
+    //Imprirmir lo que hay en las listas de letras: correctas e incorrectas.     
     console.log("Letra correctas");
-    console.log(letrapresionadacorrecta);
+    console.log(letraspresionadacorrecta);
     console.log("Letra incorrectas");
-    console.log(letrapresionadaincorrecta); 
-*/
+    console.log(letraspresionadaincorrecta); 
+
 }
 
 function enviarLetraMovil(){
@@ -233,7 +232,7 @@ function enviarLetraMovil(){
     const pattern = new RegExp('^[A-Z]+$', 'i');
     if(pattern.test(letramobile)){
         if(recibir){
-            recibirLetras(letramobile);
+            recibirLetras(letramobile.toLowerCase());
         }
     }
     else{
