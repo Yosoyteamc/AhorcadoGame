@@ -250,7 +250,6 @@ function enviarLetraMovil(){
 }
 
 function esperarLetras(){
-/*
     document.addEventListener('keyup', (event) => {
         var keyName = event.key;
         var KeyCode = event.keyCode; 
@@ -266,7 +265,6 @@ function esperarLetras(){
             }
         }
       }, false);
-*/
 }
 
 function jugar(){
@@ -299,7 +297,18 @@ function rendirse(){
 }
 
 function agregarPalabra(){
-    console.log("Agregar");
+    var palabranueva = document.getElementById("text-add-word").value;
+    const pattern = new RegExp('^[A-Z]+$', 'i');
+    if(pattern.test(palabranueva)){
+            palabras.push(palabranueva);
+            alert("La palabra se agregó.");
+    }
+    else{
+            alert("La palabra no puede ser agregada.")
+        }
+    
+    document.getElementById("text-add-word").value = "";
+
 }
 
 function pantallaAgregarPalabra(){

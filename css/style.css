@@ -178,7 +178,8 @@ main{
 }
 
 .view-ingame{
-    height: 660px;
+    height: 600px;
+    padding-bottom: 60px;
     background-color: var(--bg-main);
     display: none;
 }
@@ -187,7 +188,8 @@ main{
     width: 80%;
     padding: 5%;
     height: 20%;
-    background-color: var(--orange-color-dark);
+    background: #33A7FF;
+    box-shadow: inset -1.5px -5px var(--blue-color);
     border: 5px solid #FAFDF9;
     border-radius: 20px;
     margin-bottom: 10px;
@@ -203,7 +205,7 @@ main{
 }
 
 .view-ingame__view-word{
-    width: 90%;
+    width: 80%;
     padding: 10%;
     height: 25%;
     margin-bottom: 20px;
