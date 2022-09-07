@@ -85,48 +85,48 @@ function dibujarMunheco(paso){
     var pincel = canvas.getContext("2d");
 
     switch (paso) {
-        case 2:
+        case 1:
             pincel.moveTo(187,20);
             pincel.lineTo(187,30);
             pincel.lineWidth = 5;
             pincel.strokeStyle = color;
             pincel.stroke();
             break;
-        case 3:
+        case 2:
             pincel.beginPath();
             pincel.arc(187,40,10,0,Math.PI*2,true); 
             pincel.closePath;
             pincel.stroke();
             break;
-        case 4:
+        case 3:
             pincel.moveTo(187,50);
             pincel.lineTo(187,90);
             pincel.lineWidth = 5;
             pincel.strokeStyle = color;
             pincel.stroke();
             break;
-        case 5:
+        case 4:
             pincel.moveTo(187,50);
             pincel.lineTo(170,75);
             pincel.lineWidth = 5;
             pincel.strokeStyle = color;
             pincel.stroke();
             break;
-        case 6:
+        case 5:
             pincel.moveTo(187,50);
             pincel.lineTo(204,75);
             pincel.lineWidth = 5;
             pincel.strokeStyle = color;
             pincel.stroke();
             break;
-        case 7: 
+        case 6: 
             pincel.moveTo(187,90);
             pincel.lineTo(204,115);
             pincel.lineWidth = 5;
             pincel.strokeStyle = color;
             pincel.stroke(); 
             break;
-        case 8:
+        case 7:
             pincel.moveTo(187,90);
             pincel.lineTo(170,115);
             pincel.lineWidth = 5;
