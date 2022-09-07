@@ -1,4 +1,4 @@
-let palabras = ["html","java","script","fronted","backend","browser","windowsx","pc","gamer","board","css","xlm"];
+let palabras = ["memoria","java","alarma","fresa","limon","pecera","windows","ala","gamer","codigo","color","pieza","arbol","estacion","robot","pelea","cosmos","naranja"];
 let letraspresionadaincorrecta = [];
 let letraspresionadacorrecta = [];
 let palabra = "";
