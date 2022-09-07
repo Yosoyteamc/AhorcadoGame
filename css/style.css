@@ -12,8 +12,6 @@
 
     --orange-color: #F2A444;
     --orange-color-dark: #F28444;
-    --purple-color: #9716F2;
-    --purple-color-dark: #9E17FF;
 
 
 }
@@ -41,7 +39,7 @@ nav{
 }
 
 .nav__image{
-    width: 60px;
+    width: 80px;
     padding: 10px;
     margin: auto 0 ;
 }
