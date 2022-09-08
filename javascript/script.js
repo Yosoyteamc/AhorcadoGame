@@ -304,9 +304,12 @@ function agregarPalabra(){
             palabras.push(palabranueva);
             alert("La palabra se agregó.");
         }
+        else{
+            alert("La palabra no puede ser agregada.");
+        }
     }
     else{
-            alert("La palabra no puede ser agregada.")
+            alert("La palabra no puede ser agregada.");
         }
     
     document.getElementById("text-add-word").value = "";
