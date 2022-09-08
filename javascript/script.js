@@ -305,7 +305,7 @@ function agregarPalabra(){
             alert("La palabra se agregó.");
         }
         else{
-            alert("La palabra no puede ser agregada.");
+            alert("La palabra no puede ser agregada. lee las condiciones");
         }
     }
     else{
