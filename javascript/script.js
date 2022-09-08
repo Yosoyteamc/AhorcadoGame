@@ -299,9 +299,11 @@ function rendirse(){
 function agregarPalabra(){
     var palabranueva = document.getElementById("text-add-word").value;
     const pattern = new RegExp('^[A-Z]+$', 'i');
-    if(pattern.test(palabranueva) && palabranueva.length>2 && palabranueva<=8){
+    if(pattern.test(palabranueva)){
+        if((palabranueva.length>2) && (palabranueva.length<=8)){
             palabras.push(palabranueva);
             alert("La palabra se agregó.");
+        }
     }
     else{
             alert("La palabra no puede ser agregada.")
