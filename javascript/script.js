@@ -185,7 +185,8 @@ function recibirLetras(letra){
                     for(var i = 0; i<palabra.length; i++){
                         dibujarLetras(palabra[i],i,true,"white");
                     }
-                    alert("Ganaste, la palabra era: " + palabra);
+                    MensajePantalla("Ganaste, la palabra era: " + palabra);
+                    //alert("Ganaste, la palabra era: " + palabra);
                     recibir = false;
                     return;
                 }
@@ -209,7 +210,8 @@ function recibirLetras(letra){
                     for(var i = 0; i<palabra.length; i++){
                         dibujarLetras(palabra[i],i,true,"red");  
                     }
-                    alert("Perdiste, la palabra era: " + palabra);
+                    MensajePantalla("Perdiste, la palabra era: " + palabra);
+                    //alert("Perdiste, la palabra era: " + palabra);
                     recibir = false;
                     return;
                 } 
@@ -227,10 +229,10 @@ function recibirLetras(letra){
     countcorrecta = false;
 
     //Imprirmir lo que hay en las listas de letras: correctas e incorrectas.     
-    console.log("Letra correctas");
+/*     console.log("Letra correctas");
     console.log(letraspresionadacorrecta);
     console.log("Letra incorrectas");
-    console.log(letraspresionadaincorrecta); 
+    console.log(letraspresionadaincorrecta);  */
 
 }
 
@@ -243,7 +245,8 @@ function enviarLetraMovil(){
         }
     }
     else{
-            alert("Por favor ingrese letras")
+        MensajePantalla("Por favor ingrese letras");      
+        //alert("Por favor ingrese letras")
         }
     document.querySelector(".view-ingame__text-mobile").value = "";
 
@@ -287,7 +290,8 @@ function rendirse(){
         for(var i = 0; i<palabra.length; i++){
             dibujarLetras(palabra[i],i,true,"Yellow");
         }
-        alert("Te rendiste, la palabra era: " + palabra);
+        MensajePantalla("Te rendiste, la palabra era: " + palabra);
+        //alert("Te rendiste, la palabra era: " + palabra);
         recibir = false;
         document.getElementById("btn-wf").value = "Salir";
     }
@@ -300,27 +304,43 @@ function agregarPalabra(){
     var palabranueva = document.getElementById("text-add-word").value;
     const pattern = new RegExp('^[A-Z]+$', 'i');
     if(pattern.test(palabranueva)){
-        if((palabranueva.length>2) && (palabranueva.length<=8)){
+        if((palabranueva.length>=3) && (palabranueva.length<=8)){
             palabras.push(palabranueva);
-            alert("La palabra se agregó.");
+            MensajePantalla("La palabra se agregó");
+            //alert("La palabra se agregó.");
         }
         else{
-            alert("La palabra no puede ser agregada. lee las condiciones");
+            MensajePantalla("La palabra no puede ser agregada. lee las condiciones");
+            //alert("La palabra no puede ser agregada. lee las condiciones");
         }
     }
     else{
-            alert("La palabra no puede ser agregada.");
+        MensajePantalla("La palabra no puede ser agregada. lee las condiciones");
+        //alert("La palabra no puede ser agregada.");
         }
     
     document.getElementById("text-add-word").value = "";
 
 }
 
+function MensajePantalla(texto){
+    var modalpantalla = document.querySelector(".view-modal");
+    modalpantalla.style.display = "flex";
+
+    document.querySelector("#modal-message").textContent = texto;
+}
+
+function MensajeOcultoPantalla(){
+    var modalpantalla = document.querySelector(".view-modal");
+    modalpantalla.style.display = "none";
+}
+
+
 function pantallaAgregarPalabra(){
     var btnlogin = document.querySelector(".view-main__btn-login");
     var btnadd = document.querySelector(".view-main__word");
     btnlogin.style.display = "none";
-    btnadd.style.display = "flex"
+    btnadd.style.display = "flex";
 }
 
 function pantallaInicio(){
