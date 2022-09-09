@@ -30,6 +30,7 @@ body{
 
 .main-scale{
     width: var(--scale-width-mobile);
+    height: max-content;
 }
 
 header{
@@ -145,8 +146,8 @@ main{
     height: 100%;
     position: absolute;
     display: none;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     top: 0;
 }
 
@@ -235,7 +236,6 @@ main{
 .view-ingame{
     height: 600px;
     padding-bottom: 60px;
-    background-color: var(--bg-main);
     display: none;
 }
 
