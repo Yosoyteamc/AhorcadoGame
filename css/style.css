@@ -140,12 +140,13 @@ main{
 }
 
 .view-modal{
+    width: 100%;
     backdrop-filter: blur(2px);
+    height: 100%;
     position: absolute;
     display: none;
     justify-content: center;
     align-items: center;
-    height: 100%;
     top: 0;
 }
 

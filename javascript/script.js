@@ -328,6 +328,7 @@ function MensajePantalla(texto){
     modalpantalla.style.display = "flex";
 
     document.querySelector("#modal-message").textContent = texto;
+    modalpantalla.focus();
 }
 
 function MensajeOcultoPantalla(){
