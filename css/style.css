@@ -144,7 +144,7 @@ main{
     backdrop-filter: blur(2px);
     height: 100%;
     position: absolute;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     top: 0;
@@ -169,6 +169,10 @@ main{
     width: 200px;
     line-height: 1.1em;
     color: white;
+}
+
+.view-modal__message p:nth-child(2){
+    font-weight: 700;
 }
 
 .view-modal__message input{

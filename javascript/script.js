@@ -185,7 +185,7 @@ function recibirLetras(letra){
                     for(var i = 0; i<palabra.length; i++){
                         dibujarLetras(palabra[i],i,true,"white");
                     }
-                    MensajePantalla("Ganaste, la palabra era: " + palabra);
+                    MensajePantalla("Ganaste, la palabra era: ",palabra);
                     //alert("Ganaste, la palabra era: " + palabra);
                     recibir = false;
                     return;
@@ -210,7 +210,7 @@ function recibirLetras(letra){
                     for(var i = 0; i<palabra.length; i++){
                         dibujarLetras(palabra[i],i,true,"red");  
                     }
-                    MensajePantalla("Perdiste, la palabra era: " + palabra);
+                    MensajePantalla("Perdiste, la palabra era: ",palabra);
                     //alert("Perdiste, la palabra era: " + palabra);
                     recibir = false;
                     return;
@@ -245,7 +245,7 @@ function enviarLetraMovil(){
         }
     }
     else{
-        MensajePantalla("Por favor ingrese letras");      
+        MensajePantalla("Por favor ingrese letras","");      
         //alert("Por favor ingrese letras")
         }
     document.querySelector(".view-ingame__text-mobile").value = "";
@@ -290,7 +290,7 @@ function rendirse(){
         for(var i = 0; i<palabra.length; i++){
             dibujarLetras(palabra[i],i,true,"Yellow");
         }
-        MensajePantalla("Te rendiste, la palabra era: " + palabra);
+        MensajePantalla("Te rendiste, la palabra era: ",palabra);
         //alert("Te rendiste, la palabra era: " + palabra);
         recibir = false;
         document.getElementById("btn-wf").value = "Salir";
@@ -306,16 +306,16 @@ function agregarPalabra(){
     if(pattern.test(palabranueva)){
         if((palabranueva.length>=3) && (palabranueva.length<=8)){
             palabras.push(palabranueva);
-            MensajePantalla("La palabra se agregó");
+            MensajePantalla("La palabra se agregó","");
             //alert("La palabra se agregó.");
         }
         else{
-            MensajePantalla("La palabra no puede ser agregada. lee las condiciones");
+            MensajePantalla("La palabra no puede ser agregada. ","Lee las condiciones");
             //alert("La palabra no puede ser agregada. lee las condiciones");
         }
     }
     else{
-        MensajePantalla("La palabra no puede ser agregada. lee las condiciones");
+        MensajePantalla("La palabra no puede ser agregada. ","Lee las condiciones");
         //alert("La palabra no puede ser agregada.");
         }
     
@@ -323,12 +323,13 @@ function agregarPalabra(){
 
 }
 
-function MensajePantalla(texto){
+function MensajePantalla(texto,textoespecial){
     var modalpantalla = document.querySelector(".view-modal");
     modalpantalla.style.display = "flex";
 
     document.querySelector("#modal-message").textContent = texto;
-    modalpantalla.focus();
+    document.getElementById("modal-message__span").textContent = textoespecial;
+    document.querySelector(".view-modal__message").focus();
 }
 
 function MensajeOcultoPantalla(){
