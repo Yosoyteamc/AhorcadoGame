@@ -245,7 +245,8 @@ function enviarLetraMovil(){
         }
     }
     else{
-        MensajePantalla("Por favor ingrese letras","");      
+        MensajePantalla("Por favor ingrese letras",""); 
+        document.querySelector(".view-ingame__text-mobile").focus();     
         //alert("Por favor ingrese letras")
         }
     document.querySelector(".view-ingame__text-mobile").value = "";
