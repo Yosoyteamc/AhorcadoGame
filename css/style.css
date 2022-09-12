@@ -6,7 +6,7 @@
     --scale-width-tablet: 768px;
     --scale-width-tablet-reduced: 720px;
     --scale-width-desktop: 1366px;
-    --scale-width-desktop-reduced: 1280px;
+    --scale-width-desktop-reduced: 1320px;
     --bg-main: #2F5FFF;
     --bg-main-light: #3A6CFF;
     --bg-main-max-light: #5185FF;
@@ -30,7 +30,6 @@ body{
 
 .main-scale{
     width: var(--scale-width-mobile);
-    height: max-content;
 }
 
 header{
@@ -66,7 +65,7 @@ nav{
 .nav__list ul li a{
     text-decoration: none;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 11px;
     color: white;
 }
@@ -98,7 +97,6 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: 15px;
 }
 
 .view-main__btn-login,.view-ingame__btn-control-game{
@@ -140,53 +138,6 @@ main{
     box-shadow: inset -2px -6px var(--blue-color);
 }
 
-.view-modal{
-    width: 100%;
-    height: 735px;
-    backdrop-filter: blur(2px);
-    position: absolute;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    top: 0;
-    left: 0;
-}
-
-.view_modal--scale{
-    height: 895px;
-}
-
-.view-modal__message{
-    width: 250px;
-    height: 100px;
-    position: relative;
-    background-color: var(--bg-main);
-    box-shadow: inset -3px -8px var(--blue-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 4px solid #FAFDF9;
-    border-radius: 30px;
-}
-
-.view-modal__message p{
-    font-size: 16px;
-    width: 200px;
-    line-height: 1.1em;
-    color: white;
-}
-
-.view-modal__message p:nth-child(2){
-    font-weight: 700;
-}
-
-.view-modal__message input{
-    position: absolute;
-    width: 100px;
-    top: 80px;
-}
-
 .btn-main__style-image{
     width: 12px;
     padding-left: 5px;
@@ -213,6 +164,7 @@ main{
     padding: 20px;
     background-color: var(--bg-main);
     box-shadow: inset -7px -10px var(--blue-color);
+    font-family: 'Rubik', sans-serif;
     color: white;
     border: 4px solid #FAFDF9;
     resize: none;
@@ -310,6 +262,53 @@ main{
     width: 18px;
 }
 
+.view-modal{
+    width: 100%;
+    height: 735px;
+    backdrop-filter: blur(2px);
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+}
+
+.view-modal--scale{
+    height: 895px;
+}
+
+.view-modal__message{
+    width: 250px;
+    height: 100px;
+    position: relative;
+    background-color: var(--bg-main);
+    box-shadow: inset -3px -8px var(--blue-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid #FAFDF9;
+    border-radius: 30px;
+}
+
+.view-modal__message p{
+    font-size: 16px;
+    width: 200px;
+    line-height: 1.1em;
+    color: white;
+}
+
+.view-modal__message p:nth-child(2){
+    font-weight: 700;
+}
+
+.view-modal__message input{
+    position: absolute;
+    width: 100px;
+    top: 80px;
+}
+
 
 footer{
     margin-top: 50px;
@@ -363,3 +362,294 @@ footer{
 }
 
 
+@media  screen and (min-width: 768px) {
+    .main-scale{
+        width: var(--scale-width-tablet);
+    }
+
+    nav{
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 0px;
+    }
+
+    .nav__list ul{
+        width: 500px;
+    }
+
+    .nav__list ul li a{
+        font-size: 14px;
+    }
+    
+    .nav__list ul li a::before{
+        font-size: 20px;
+    }
+
+    .view-main, .view-ingame{
+        width: var(--scale-width-tablet-reduced);
+        margin: 40px auto;
+    }
+
+    .view-main__btn-add-word{
+        width: 80%;
+        margin: 30px 0;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .view-main__space-word{
+        width: var(--scale-width-tablet-reduced);
+        padding-bottom: 20px;
+    }
+
+    .word__parraf{
+        margin-left: 30px;
+        font-size: 13px;
+        width: 80%;
+    }
+    
+    .word__parraf img{
+        width: 13px;
+        margin-right: 5px;
+    }
+
+    .view-ingame{
+        height: 700px;
+        padding-bottom: 0px;
+        display: none;
+    }
+    
+    .view-ingame__view-picture{
+        width: 400px;
+        padding: 25px;
+        height: 200px;    
+    }
+    
+    .view-ingame__control-game{
+        width: 450px;
+        height: 400px;
+    }
+
+    .view-ingame__view-word{
+        width: 300px;
+        height: 80px;
+        margin-bottom: 20px;
+    }
+    
+    .view-ingame__mobile{
+        width: 100%;
+        margin-bottom: 60px;
+    }
+    
+    .view-ingame__text-mobile{
+        width: 70%;
+        height: 10px;
+        font-size: 16px;
+    }
+    
+    .btn-mobile{
+        width: 13%;
+    }
+
+    .btn-mobile__image{
+        width: 20px;
+    }
+
+    .view-ingame__btn-control-game{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .view-modal__message{
+        width: 250px;
+        height: 100px;
+    }
+    
+    .view-modal__message p{
+        font-size: 16px;
+        width: 200px;
+        line-height: 1.1em;
+        color: white;
+    }
+    
+    .view-modal__message p:nth-child(2){
+        font-weight: 700;
+    }
+    
+    .view-modal__message input{
+        position: absolute;
+        width: 100px;
+        top: 80px;
+    }
+
+    /* Calcular los pixeles para tablet*/
+    .view-modal{
+        height: 735px;
+    }
+    
+    .view-modal--scale{
+        height: 835px;
+    }
+    
+    .view-modal__message{
+        width: 300px;
+        height: 130px;
+    }
+    
+    .view-modal__message p{
+        font-size: 18px;
+        width: 200px;
+        line-height: 1.15em;
+        color: white;
+    }
+       
+    .view-modal__message input{
+        top: 105px;
+    }
+
+    .footer__info{
+        width: var(--scale-width-tablet-reduced);
+    }
+    
+    .info-text__title, .info-text__parraf, .info-icon__social-media{
+        width: 80%;
+        font-size: 20px;
+    }
+    
+    .info-text__parraf{
+        font-size: 15px;
+    }
+    
+    .copy{
+        width: var(--scale-width-tablet-reduced);
+        font-size: 13px;
+        text-align: center;
+    }
+        
+}
+
+@media screen and (min-width:1366px) {
+    .main-scale{
+        width: var(--scale-width-desktop);
+    }
+    
+    .nav__content{
+        width: 700px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav__social-media{
+        width: max-content;
+        display: flex;
+    }
+
+    .social-media__image{
+        width: 25px;
+        display: flex;
+        margin-right: 25px;
+    }
+    
+    .view-main, .view-ingame{
+        width: var(--scale-width-desktop-reduced);
+        margin: 40px auto;
+    }
+
+    .btn-main__style{
+        width: 230px;
+        font-size: 16px;
+    }
+    
+    .view-main__space-word{
+        width: var(--scale-width-desktop-reduced);
+    }
+
+    .word__text-area{
+        height: 150px;
+        font-size: 20px;
+    }
+    
+    .word__parraf{
+        margin-left: 80px;
+        font-size: 18px;
+    }
+    
+    .word__parraf img{
+        width: 18px;
+        margin-right: 8px;
+    }
+
+    .view-main__btn-add-word{
+        width: 70%;
+        justify-content: flex-end;
+    }
+
+    .view-main__btn-add-word input{
+        margin-left: 20px;
+    }
+
+    .view-ingame{
+        height: 500px;
+        display: none;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    
+    .view-ingame__view-picture{
+        width: 500px;
+        height: 250px;
+    }
+
+    .view-ingame__control-game{
+        width: 500px;
+        height: 300px;
+    }
+
+    .view-ingame__view-word{
+        width: 400px;
+        height: 100px;
+        margin-bottom: 20px;
+    }
+    
+    .view-ingame__mobile{
+        display: none;
+    }
+
+    .view-ingame__btn-control-game input{
+        width: 200px;
+    }
+
+    /* Calcular los pixeles para tablet*/
+    .view-modal{
+        height: 735px;
+    }
+    
+    .view-modal--scale{
+        height: 735px;
+    }
+
+    .footer__info{
+        width: var(--scale-width-desktop-reduced);
+        display: flex;
+        flex-direction: row; 
+    }
+
+    .info-text__title, .info-text__parraf, .info-icon__social-media{
+        width: 80%;
+        font-size: 20px;
+
+    }
+
+    .info-text__title{
+        font-size: 25px;
+    }
+
+    .info-icon__social-media{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}

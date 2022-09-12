@@ -307,7 +307,7 @@ function agregarPalabra(){
     if(pattern.test(palabranueva)){
         if((palabranueva.length>=3) && (palabranueva.length<=8)){
             palabras.push(palabranueva);
-            MensajePantalla("La palabra se agregó","");
+            MensajePantalla("La palabra: '" + palabranueva + "' se agregó","");
             //alert("La palabra se agregó.");
         }
         else{
@@ -344,9 +344,6 @@ function pantallaAgregarPalabra(){
     var btnadd = document.querySelector(".view-main__word");
     btnlogin.style.display = "none";
     btnadd.style.display = "flex";
-
-    var scaleblur = document.getElementById('view-modal--scale');
-    scaleblur.classList.remove('view-modal--scale');
 }
 
 function pantallaInicio(){
@@ -358,8 +355,6 @@ function pantallaInicio(){
     pantallaJuego.style.display = "none"
     btnlogin.style.display = "flex";
     btnadd.style.display = "none"
-    var scaleblur = document.getElementById('view-modal--scale');
-    scaleblur.classList.remove('view-modal--scale');
 }
 
 function pantallaJugar(){
@@ -368,8 +363,7 @@ function pantallaJugar(){
     pantallaInicio.style.display = "none";
     pantallaJuego.style.display = "flex"
 
-    var scaleblur = document.getElementById('view-modal--scale');
-    scaleblur.classList.add('view-modal--scale');
+    document.getElementById('modal').classList.add('view-modal--scale');
 
     jugar();
 }
