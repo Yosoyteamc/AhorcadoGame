@@ -344,6 +344,9 @@ function pantallaAgregarPalabra(){
     var btnadd = document.querySelector(".view-main__word");
     btnlogin.style.display = "none";
     btnadd.style.display = "flex";
+
+    var scaleblur = document.getElementById('view-modal--scale');
+    scaleblur.classList.remove('view-modal--scale');
 }
 
 function pantallaInicio(){
@@ -355,6 +358,8 @@ function pantallaInicio(){
     pantallaJuego.style.display = "none"
     btnlogin.style.display = "flex";
     btnadd.style.display = "none"
+    var scaleblur = document.getElementById('view-modal--scale');
+    scaleblur.classList.remove('view-modal--scale');
 }
 
 function pantallaJugar(){
@@ -362,6 +367,9 @@ function pantallaJugar(){
     var pantallaJuego = document.querySelector(".view-ingame");
     pantallaInicio.style.display = "none";
     pantallaJuego.style.display = "flex"
+
+    var scaleblur = document.getElementById('view-modal--scale');
+    scaleblur.classList.add('view-modal--scale');
 
     jugar();
 }

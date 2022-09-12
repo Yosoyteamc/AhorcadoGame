@@ -152,6 +152,10 @@ main{
     left: 0;
 }
 
+.view_modal--scale{
+    height: 180%;
+}
+
 .view-modal__message{
     width: 250px;
     height: 100px;
