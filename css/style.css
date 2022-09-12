@@ -142,7 +142,7 @@ main{
 
 .view-modal{
     width: 100%;
-    height: 140%;
+    height: 120%;
     backdrop-filter: blur(2px);
     position: absolute;
     display: none;
