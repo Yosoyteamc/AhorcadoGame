@@ -355,6 +355,8 @@ function pantallaInicio(){
     pantallaJuego.style.display = "none"
     btnlogin.style.display = "flex";
     btnadd.style.display = "none"
+
+    document.getElementById('modal').classList.remove('view-modal--scale');
 }
 
 function pantallaJugar(){
